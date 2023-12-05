@@ -22,3 +22,18 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## Dokku
+
+```
+dokku apps:create quotemorph
+dokku domains:add quotemorph quotes.mrks.io
+dokku config:set quotemorph RAILS_MASTER_KEY=5ca281d0a8c497546ae93037c485d656
+```
+
+Deploy app, then enable letsencrypt
+
+```
+dokku letsencrypt:set quotemorph email carl@linkleaf.com
+dokku letsencrypt:enable quotemorph
+```
