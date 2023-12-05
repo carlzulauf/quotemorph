@@ -65,6 +65,6 @@ class QuotesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def quote_params
-      params.require(:quote).permit(:body, :author, :context, :order)
+      params.require(:quote).permit(:body, :author, :context, :order).merge(updated_at: Time.current)
     end
 end

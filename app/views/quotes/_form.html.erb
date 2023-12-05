@@ -13,7 +13,7 @@
 
   <div>
     <%= form.label :body, style: "display: block" %>
-    <%= form.text_area :body %>
+    <%= form.text_area :body, cols: 80, rows: 10 %>
   </div>
 
   <div>
@@ -33,5 +33,6 @@
 
   <div>
     <%= form.submit %>
+    Updated <%= quote.updated_at %>
   </div>
 <% end %>
